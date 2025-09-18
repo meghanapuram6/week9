@@ -14,13 +14,13 @@ apurapipeline {
         }
         stage('Deploy to Kubernetes') {
             steps {
-                bat 'kubectl apply -f C:\Users\Admin\Documents\1290\Week9/deployment.yaml'
-                bat 'kubectl apply -f C:\Users\Admin\Documents\1290\Week9/service.yaml'
+                bat 'kubectl apply -f C:/Users/Admin/Documents/1290/Week9/deployment.yaml'
+                bat 'kubectl apply -f C:/Users/Admin/Documents/1290/Week9/service.yaml'
             }
         }
         stage('Automated UI Test') {
             steps {
-                bat 'python C:\Users\Admin\Documents\1290\Week9test_registration.py'
+                bat 'python C:/Users/Admin/Documents/1290/Week9/test_registration.py'
             }
         }
     }
