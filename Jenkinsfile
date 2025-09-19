@@ -8,19 +8,19 @@ apurapipeline {
         }
         stage('Push to Docker Hub') {
             steps {
-                bat 'docker tag registration:v1 meghanapuram/registration:v1'
+                bat 'docker tag registration:v1 meghanapuram6/registration:v1'
                 bat 'docker push meghanapuram6/registration:v1'
             }
         }
         stage('Deploy to Kubernetes') {
             steps {
-                bat 'kubectl apply -f C:/Users/Admin/Documents/1290/Week9/deployment.yaml'
-                bat 'kubectl apply -f C:/Users/Admin/Documents/1290/Week9/service.yaml'
+                bat 'kubectl apply -f D:\DevOps\Week-2/deployment.yaml'
+                bat 'kubectl apply -f D:\DevOps\Week-2/service.yaml'
             }
         }
         stage('Automated UI Test') {
             steps {
-                bat 'python C:/Users/Admin/Documents/1290/Week9/test_registration.py'
+                bat 'python D:\DevOps\Week-2/test_registration.py'
             }
         }
     }
